@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="wiki-container">
+  <aside class="wiki-sidebar">
+    {% include_relative _wiki/_sidebar.md %}
+  </aside>
+  
+  <article class="wiki-content">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </article>
+</div>

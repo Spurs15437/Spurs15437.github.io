@@ -1,0 +1,36 @@
+title: Spurs的空间
+description: 个人主页、技术笔记与知识库
+baseurl: ""
+url: "https://spurs15437.github.io"
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-optional-front-matter
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "_notes"
+    values:
+      layout: note
+  - scope:
+      path: "_wiki"
+    values:
+      layout: wiki
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
